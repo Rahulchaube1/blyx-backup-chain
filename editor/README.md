@@ -1,10 +1,12 @@
 # Backup Chain
 
-![Package logo](https://github.com/Rahulchaube1/blyx-backup-chain/raw/v0.1.1/editor/icon.png)
+![Green peafowl male](https://github.com/Rahulchaube1/blyx-backup-chain/raw/v0.1.2/editor/icon.png)
 
 Require a base snapshot and contiguous increments before sealing a restorable backup chain.
 
-Reliability and delivery · framework · 0.1.1
+Reliability and delivery · framework · 0.1.2
+
+Framework bird: Green peafowl male.
 
 ## Drive the workflow
 
@@ -37,11 +39,11 @@ Run `blyxc native-run main.blyx` to reproduce `expected.txt`. Run `blyxc native-
 ## Try the published project
 
 ```sh
-nest demo backup_chain@0.1.1
+nest demo backup_chain@0.1.2
 blyxc native-run backup_chain-demo/main.blyx
 ```
 
-Install with `nest add backup_chain@0.1.1` and import `vendor::backup_chain::backup_chain`.
+Install with `nest add backup_chain@0.1.2` and import `vendor::backup_chain::backup_chain`.
 
 Maintained by Rahul Chaube. [Blyx](https://www.blyx-lang.space) · [GitHub](https://github.com/Rahulchaube1) · [LinkedIn](https://www.linkedin.com/in/rahulchaube1) · [Sponsor](https://github.com/sponsors/Rahulchaube1)
 

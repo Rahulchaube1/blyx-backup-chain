@@ -2,7 +2,9 @@
 
 Require a base snapshot and contiguous increments before sealing a restorable backup chain.
 
-Reliability and delivery · framework · 0.1.1
+Reliability and delivery · framework · 0.1.2
+
+Framework bird: Green peafowl male.
 
 ## Drive the workflow
 
@@ -31,10 +33,10 @@ blyxc native-run main.blyx -- base 4 verified 4 increment 5 seal 5
 ## Try the published project
 
 ```sh
-nest demo backup_chain@0.1.1
+nest demo backup_chain@0.1.2
 blyxc native-run backup_chain-demo/main.blyx
 ```
 
-Install with `nest add backup_chain@0.1.1` and import `vendor::backup_chain::backup_chain`.
+Install with `nest add backup_chain@0.1.2` and import `vendor::backup_chain::backup_chain`.
 
 Maintained by Rahul Chaube. [Blyx](https://www.blyx-lang.space) · [GitHub](https://github.com/Rahulchaube1) · [LinkedIn](https://www.linkedin.com/in/rahulchaube1) · [Sponsor](https://github.com/sponsors/Rahulchaube1)

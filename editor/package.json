@@ -2,7 +2,7 @@
   "name": "blyx-backup-chain",
   "displayName": "Backup Chain for Blyx",
   "publisher": "RahulChaube",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Require a base snapshot and contiguous increments before sealing a restorable backup chain.",
   "license": "MIT",
   "engines": {
