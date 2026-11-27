@@ -1,0 +1,28 @@
+{
+  "name": "blyx-backup-chain",
+  "displayName": "Backup Chain for Blyx",
+  "publisher": "RahulChaube",
+  "version": "0.1.1",
+  "description": "Require a base snapshot and contiguous increments before sealing a restorable backup chain.",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "icon.png",
+  "homepage": "https://nest.blyx-lang.space/packages/backup_chain.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rahulchaube1/blyx-backup-chain.git"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "blyx",
+        "path": "./snippets.json"
+      }
+    ]
+  }
+}

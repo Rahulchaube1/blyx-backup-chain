@@ -1,0 +1,5 @@
+copy_base
+accept_increment
+reject
+record_increment
+publish_manifest

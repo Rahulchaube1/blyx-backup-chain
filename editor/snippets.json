@@ -1,0 +1,27 @@
+{
+  "backup_chain_start": {
+    "prefix": "backup_chain_start",
+    "body": "backup_chain_start()",
+    "description": "Backup Chain \u00b7 Require a base snapshot and contiguous increments before sealing a restorable backup chain."
+  },
+  "backup_chain_step": {
+    "prefix": "backup_chain_step",
+    "body": "backup_chain_step(${1:snapshot}, ${2:event}, ${3:value})",
+    "description": "Backup Chain \u00b7 Require a base snapshot and contiguous increments before sealing a restorable backup chain."
+  },
+  "backup_chain_command": {
+    "prefix": "backup_chain_command",
+    "body": "backup_chain_command(${1:snapshot})",
+    "description": "Backup Chain \u00b7 Require a base snapshot and contiguous increments before sealing a restorable backup chain."
+  },
+  "backup_chain_replay": {
+    "prefix": "backup_chain_replay",
+    "body": "backup_chain_replay(${1:events}, ${2:values})",
+    "description": "Backup Chain \u00b7 Require a base snapshot and contiguous increments before sealing a restorable backup chain."
+  },
+  "Import backup_chain": {
+    "prefix": "use_backup_chain",
+    "body": "use vendor::backup_chain::backup_chain;",
+    "description": "Import the installed Backup Chain module"
+  }
+}

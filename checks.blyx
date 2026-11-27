@@ -1,0 +1,35 @@
+use std::cli;
+use vendor::backup_chain::backup_chain;
+
+fn main() {
+    let mut state = backup_chain_start();
+    state = backup_chain_step(state, "base", 4.0);
+    println!(backup_chain_command(state));
+    state = backup_chain_step(state, "verified", 4.0);
+    println!(backup_chain_command(state));
+    state = backup_chain_step(state, "increment", 6.0);
+    println!(backup_chain_command(state));
+    state = backup_chain_step(state, "increment", 5.0);
+    println!(backup_chain_command(state));
+    state = backup_chain_step(state, "seal", 5.0);
+    println!(backup_chain_command(state));
+    println!(len(backup_chain_step([], "bad", 0.0)));
+    println!(backup_chain_command(backup_chain_step(backup_chain_start(), "unrecognized", 0.0)));
+    println!(len(backup_chain_replay(args_new(), [1])));
+    let mut events = args_new();
+    events = args_push(events, "base");
+    events = args_push(events, "verified");
+    events = args_push(events, "increment");
+    events = args_push(events, "seal");
+    println!(backup_chain_command(backup_chain_replay(events, [4, 4, 5, 5])));
+    let branch_0 = backup_chain_step([0, 0, 0], "base", 0.0);
+    println!(at(branch_0, 0) == 1.0 && at(branch_0, 1) == 0.0 && backup_chain_command(branch_0) == "copy_base");
+    let branch_1 = backup_chain_step([1, 0, 0], "verified", 0.0);
+    println!(at(branch_1, 0) == 2.0 && at(branch_1, 1) == 0.0 && backup_chain_command(branch_1) == "accept_increment");
+    let branch_2 = backup_chain_step([2, 0, 0], "increment", 1.0);
+    println!(at(branch_2, 0) == 2.0 && at(branch_2, 1) == 1.0 && backup_chain_command(branch_2) == "record_increment");
+    let branch_3 = backup_chain_step([2, 0, 0], "seal", 0.0);
+    println!(at(branch_3, 0) == 3.0 && at(branch_3, 1) == 0.0 && backup_chain_command(branch_3) == "publish_manifest");
+    let branch_4 = backup_chain_step([2, 0, 0], "gap", 2.0);
+    println!(at(branch_4, 0) == 1.0 && at(branch_4, 1) == 2.0 && backup_chain_command(branch_4) == "restart_from_base");
+}
